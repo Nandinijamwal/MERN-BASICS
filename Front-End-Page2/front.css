@@ -1,0 +1,151 @@
+*{
+    padding:5px;
+    margin:0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(81, 81, 81);
+}
+
+.mid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.midpic {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+}
+
+.btn{
+    text-align: center;
+    padding:15px;
+    background-color: rgb(248, 247, 247);
+    border:none;
+    border-color: rgb(248, 247, 247) ;
+    cursor: pointer;
+    border-radius:6px;
+}
+
+.btn:active{
+    color: blue;
+}
+
+.btn:hover{
+    scale: 1.15;
+    transition: all 300 ms ease-out;
+}
+
+main{
+    padding: 10px;
+}
+
+.art1{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+}
+
+.iconbg{
+   background-color: #E8F5E9;
+   padding:20px;
+border-radius: 20px 5px 20px 5px;
+}
+
+
+.article1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:10px;
+    padding:10px;
+
+}
+
+.art1comp{
+    
+    border-width: 100px;
+    border-radius: 15px;
+    max-width: 350px;
+    padding:10px 20px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.artcomp{
+
+    border-radius: 15px;
+    padding:10px 20px;
+    
+}
+.art2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#footdiv{
+    height: 328px;
+    width:1440px;
+    padding: 64px, 165px, 64px, 165px;
+    
+}
+
+input::placeholder {
+    color: white; /* Set the color you want for the placeholder text */
+    opacity: 1; /* This is optional, set it to 1 to ensure the color is fully opaque */
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    background-color: grey;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    width: 220px; /* Adjust the width as needed */
+}
+
+.input-container {
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #0e0f10;
+    padding: 5px;
+}
+
+.container {
+    position: relative;
+    width: 300px;
+    height: 235px;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.text-box {
+    position: absolute;
+    bottom: -60px; 
+    left: 50%; 
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.866); 
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 240px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.art4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+

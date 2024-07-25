@@ -1,0 +1,34 @@
+/* Descendent Selector */
+
+/* div h4{
+    color: brown;
+} */
+.food li{
+    background-color: bisque;
+}
+
+/* Child Selector */
+
+div>h4{
+    color: coral;
+}
+
+body>h4{
+    color: red
+}
+
+/* Adjacent Sibling Selector */
+h4+ul >p{
+    background-color: blueviolet;
+}
+
+h4 + p > ul {
+    background-color: darkgray;
+}
+
+/* General Sibling Selector*/
+
+h4~p{
+    background-color: seagreen;
+} 
+

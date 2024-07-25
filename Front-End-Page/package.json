@@ -1,0 +1,15 @@
+{
+  "name": "front-end-page",
+  "version": "1.0.0",
+  "main": "frontServer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}

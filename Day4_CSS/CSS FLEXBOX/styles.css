@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.child{
+    background-color: bisque;
+    padding: 16px;
+    border: 1px solid black;
+    /* width: 200px;
+    float: left; */
+}
+
+.parent{
+    height: 100px;
+    width: 80vw;
+    background-color: green;
+    display: flex;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.child3{
+    order: -1;
+}

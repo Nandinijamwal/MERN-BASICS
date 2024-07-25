@@ -1,0 +1,59 @@
+.parent{
+    background-color: yellow;
+    padding: 24px;
+    border: 1px solid red;
+    margin: 20px;
+    height: 300px;
+}
+
+.parent1>h1{
+    position: relative;
+    left: 50px;
+    top: 40px;
+    background-color: antiquewhite;
+}
+
+.parent1>p{
+    position: relative;
+    height: 40px;
+    z-index: 60px;
+    background-color: purple;
+}
+
+.parent2{
+    background-color: aqua;
+
+}
+
+.parent2>h1{
+    position: absolute;
+    background-color: grey;
+    left: 300px;
+    top:50px
+}
+
+.parent3{
+    background-color: green;
+}
+
+.parent3>h1{
+    position: fixed;
+    background-color: pink;
+    left: 300px;
+    top:50px
+}
+.parent4{
+    background-color: rgb(0, 128, 117);
+}
+
+.parent4>h1{
+    position: sticky;
+    top: 100px;
+    background-color: blue;
+}
+.parent5{
+    background-color: rgb(178, 128, 128);
+}
+.parent6{
+    background-color: rgb(162, 164, 180);
+}

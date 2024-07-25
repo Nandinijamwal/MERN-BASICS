@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form action="/profile.html" method="get">
+
+        <label for="f-name"> Name </label>
+        <input id="f-name" type="text" placeholder="Enter Name" name="username" required autocomplete="off">
+        <br><br>
+
+        <label for="f-age"> Age: </label>
+        <input id="f-age" type="number" placeholder="Enter Age" name="age">
+        <br><br>
+
+        <label> Gender: </label>
+        <input id="f-male" type="radio" name="gender" value="Male"><label for="f-male">Male</label>
+        <input id="f-female" type="radio" name="gender" value="Female"><label for="f-female">Female</label>
+        <input id="f-other" type="radio" name="gender" value="Other"><label for="f-other">Other</label>
+        <br><br>
+
+        <label> Hobby(ies): </label>
+        <input id="f-walk" type="checkbox" name="hobby" value="Walk"><label for="f-walk">Walking</label>
+        <input id="f-read" type="checkbox" name="hobby" value="Read"><label for="f-read">Reading</label>
+        <input id="f-dance" type="checkbox" name="hobby" value="Dance"><label for="f-dance">Dancing</label>
+        <input id="f-sing" type="checkbox" name="hobby" value="Sing"><label for="f-sing">Singing</label>
+        <input id="f-else" type="checkbox" name="hobby" value="Else"><label for="f-else">Else</label>
+        <br><br>
+
+        <label>City:</label>
+        <select name="f-city">
+            <option selected value="jmu">Jammu</option>
+            <option value="pun">Punjab</option>
+            <option value="hp">Himachal</option>
+            <option value="up">Uttar Pradesh</option>
+        </select>
+        <br><br>
+
+        <textarea name="f-info">Short intro about yourself</textarea>
+        <br><br>
+
+        <meter value="0.5">Loading</meter><label>Loading</label><br><br>
+        <progress value="0.7"></progress><br><br>
+
+        <video src="../new.mp4" controls autoplay="true"  loop></video><br><br>
+        
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. &lt; &gt; &copy; Reiciendis, ab. Nandini&nbsp;Jmawal
+        <br>
+        <bdo dir="rtl"> I am Okay </bdo><br><br>
+        <a href="mailto: nandinirjamwal@gmail.com">MAIL</a><br><br>
+        <a href="tel:7889845496">CALL</a><br><br>
+
+        <style>
+            .button {
+                display: inline-block;
+                padding-right: 10px; /* Adds space to the right of the button */
+            }
+        </style>
+        <button type="submit">SUBMIT</button>
+        <button type="reset">RESET</button>
+    </form>
+</body>
+</html>

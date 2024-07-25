@@ -1,0 +1,67 @@
+<!-- profile.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Card</title>
+    <style>
+        /* Your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lavender;
+            padding: 20px;
+        }
+
+        .id-card {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="id-card">
+        <h1>ID Card</h1>
+        <div id="id-card-content">
+            <!-- JavaScript will populate this -->
+        </div>
+    </div>
+
+    <script>
+        // Function to get URL parameter by name
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        // Retrieve form data from URL parameters
+        var firstName = getParameterByName('fname');
+        var lastName = getParameterByName('lname');
+        var dob = getParameterByName('dateofbirth');
+        var gender = getParameterByName('gender');
+        var roomType = getParameterByName('room');
+        var state = getParameterByName('state');
+
+        // Display form data in the ID card
+        var idCardContent = document.getElementById('id-card-content');
+        idCardContent.innerHTML = `
+            <p><strong>Name:</strong> ${firstName} ${lastName}</p>
+            <p><strong>Date of Birth:</strong> ${dob}</p>
+            <p><strong>Gender:</strong> ${gender}</p>
+            <p><strong>Room Type:</strong> ${roomType}</p>
+            <p><strong>State:</strong> ${state}</p>
+            <!-- You can add more fields as needed -->
+        `;
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.child{
+    background-color: rgb(37, 196, 37);
+    padding: 16px;
+    border: 1px solid black;
+    /* width: 200px;
+    float: left; */
+}
+
+.parent{
+    height: 500px;
+    width: 100vw;
+    background-color: green;
+    display: grid;
+    
+    /* grid-template-columns: repeat(4,200px) ; */
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    grid-auto-rows: 100px;
+}
+.child2{
+    background-color: aquamarine;
+    grid-row-start:1 ;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}

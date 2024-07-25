@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Assignment</title>
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        /* Additional CSS for hiding/showing ID card */
+        .id-card {
+            display: none;
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .id-card.show {
+            display: flex;
+        }
+
+        .id-card-content {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .profile-image {
+            max-width: 100%;
+            height: auto;
+            max-height: 200px; /* Limit the height if needed */
+        }
+    </style>
+</head>
+<body>
+    <form id="id-card-form">
+        <label for="fnm">First Name</label>
+        <input id="fnm" class="input-field" type="text" placeholder="INSERT FIRST NAME" name="fname"><br><br>
+
+        <label for="lnm">Last Name</label>
+        <input id="lnm" class="input-field" type="text" placeholder="INSERT LAST NAME" name="lname"><br><br>
+
+        <label for="dob">Date of Birth</label>
+        <input id="dob" class="input-field" type="date" placeholder="INSERT DOB" name="dateofbirth"><br><br>
+
+        <label>Gender:</label>
+        <input id="f-male" class="input-field" type="radio" name="gender" value="Male"><label for="f-male">Male</label>
+        <input id="f-female" class="input-field" type="radio" name="gender" value="Female"><label for="f-female">Female</label>
+        <input id="f-other" class="input-field" type="radio" name="gender" value="Other"><label for="f-other">Other</label>
+        <br><br>
+
+        <label for="room">Room Type:</label>
+        <select id="room" class="input-field" name="room">
+            <option value="">Select Room Preference</option>
+            <option value="Single">Single Share</option>
+            <option value="Double">Double Share</option>
+            <option value="Triple">Triple Share</option>
+        </select>
+        <br><br>
+
+        <label for="state">State:</label>
+        <select id="state" class="input-field" name="state">
+            <option value="">Select State</option>
+            <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+            <!-- Add more options as needed -->
+        </select>
+        <br><br>
+
+        <label for="photo" class="input-field">Upload Photograph:</label>
+        <input id="photo" type="file" name="photo" accept="image/*"><br><br>
+
+        <button id="btn" class="input-field" type="button" onclick="generateIDCard()">Generate Card</button>
+    </form>
+
+    <div id="id-card" class="id-card">
+        <div class="id-card-content">
+            <h1>ID Card</h1>
+            <div id="id-card-details">
+                <!-- JavaScript will populate this -->
+            </div>
+        </div>
+        <div id="photo-container">
+            <img id="profile-photo" class="profile-image" src="" alt="Uploaded Photograph">
+        </div>
+    </div>
+
+    <script>
+        function generateIDCard() {
+            var firstName = document.getElementById('fnm').value;
+            var lastName = document.getElementById('lnm').value;
+            var dob = document.getElementById('dob').value;
+            var gender = document.querySelector('input[name="gender"]:checked');
+            var roomType = document.getElementById('room').value;
+            var state = document.getElementById('state').value;
+            var photo = document.getElementById('photo').files[0]; // Get the file object
+
+            if (!firstName || !lastName || !dob || !gender || !roomType || !state || !photo) {
+                alert('Please fill in all fields and upload a photograph.');
+                return;
+            }
+
+            // Display ID card with the submitted information
+            var idCardDetails = document.getElementById('id-card-details');
+            idCardDetails.innerHTML = `
+                <p><strong>Name:</strong> ${firstName} ${lastName}</p>
+                <p><strong>Date of Birth:</strong> ${dob}</p>
+                <p><strong>Gender:</strong> ${gender.value}</p>
+                <p><strong>Room Type:</strong> ${roomType}</p>
+                <p><strong>State:</strong> ${state}</p>
+                <!-- You can add more fields as needed -->
+            `;
+
+            // Display uploaded photograph
+            var reader = new FileReader();
+            reader.onload = function(event) {
+                var profilePhoto = document.getElementById('profile-photo');
+                profilePhoto.src = event.target.result;
+                profilePhoto.alt = `Photograph of ${firstName} ${lastName}`;
+            };
+            reader.readAsDataURL(photo); // Read the uploaded file as a data URL
+
+            // Show the ID card section
+            var idCardSection = document.getElementById('id-card');
+            idCardSection.classList.add('show');
+        }
+    </script>
+</body>
+</html>

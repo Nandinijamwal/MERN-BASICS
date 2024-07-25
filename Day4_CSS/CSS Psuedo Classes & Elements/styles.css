@@ -1,0 +1,36 @@
+/* *{
+    box-sizing: border-box;
+} */
+
+.btn{
+    padding: 20px;
+    margin: 20px auto;
+    display: block;
+    border: 20px;
+    border-radius: 16px;
+    background-color: black;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: darkgreen;
+    color: bisque;
+    scale: 1.25;
+}
+
+.btn:active{
+    color: darkturquoise;
+    background-color: orange;
+}
+
+/* PSEUDO ELEMENTS */
+
+p::first-letter{
+    color: red;
+}
+
+li::after{
+    content:"^";
+    color: yellow;
+}
