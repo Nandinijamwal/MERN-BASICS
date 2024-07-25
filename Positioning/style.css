@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.parent{
+    background-color: blanchedalmond;
+    padding: 16px;
+    /* height: 100vh;
+    width: 100vw; */
+}
+
+.child{
+    width: 500px;
+    height: 500px;
+    font-size: 18px;
+    text-decoration: underline;
+    border: solid 4px navy;
+}
+
+.child1{
+    background-color: aquamarine;
+    position: sticky; top: 50px;
+}
+
+.child2{
+    background-color: black;
+    color: white;
+}
+
+.child3{
+    background-color: lightblue;
+    
+}
+
+.child4{
+    background-color: lightcoral;
+}
